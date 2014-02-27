@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  #header
+    h1= title
+  a(href="/") Homepage
+  table(style="border-collapse: collapse","padding:10px")
+    thead
+        tbody
+          if(page == "memory")
+            each field in fields  
+                th.col=field.name
+            each index in results
+              tr
+                td.table=index.slno
+                td.table=index.appID
+                td.table=index.processID
+                td.table=index.processMemory 
+                td.table=index.used 
+                td.table=index.free 
+                td.table=index.total
+                td.table=index.shared
+                td.table=index.buffer 
+                td.table=index.cached
+                td.table=index.processCount

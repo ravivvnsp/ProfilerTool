@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  #header
+    h1= title
+  a(href="/") Homepage
+  h2 Welcome to #{title} Homepage
+  br
+  form(method='get',action='/mem')
+    p Enter Target IPAddress
+      br
+      br
+      input(type="text",placeholder="IPAddress",value=ip,name="ip") 
+      input.button(type="submit", value="Start",onclick="validate(ip)")
+
+  //var validate =function(ipadd) {if(!ipadd) console.log('waste fellow')}

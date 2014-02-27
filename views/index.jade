@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  #header
+    h1= title
+  h2 Welcome to #{title} Homepage
+  br
+  br
+  form(method='get', action='/perf')
+   button.button(type='submit') JS Performance
+  br
+  br
+  form(method='get', action='/mem')
+   button.button(type='submit') Memory Usage
+  br
+  br
+  form(method='get', action='/cpu')
+   button.button(type='submit') CPU Performance
+  br
+  br
+  form(method='get', action='/reports')
+   button.button(type='submit') Reports
